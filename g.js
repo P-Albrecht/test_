@@ -99,15 +99,6 @@ export class Graph {
         this.AdjList.set(v, {dependencies:[], varDeps:[], object:{...object_}, fileId:fileId, parent:-1, siblings:[], children:[...object.children], localVar:[], secondaryVariables:[], localFlowHistory:[]});
     }
 
-    setLocalFlowHistory (keyList) {
-        let list = []
-        for (let i=0; i<keyList.length; i++) {
-            if (this.AdjList.get(keyList[i]).parent === -1) {
-                list.push(keyList[i]);
-                this.walkFileTree(keyList[i], []);
-            }
-        }
-    }
 
     setVariableDependencies (keyList) {
         for (let i=0; i<keyList.length; i++) {
