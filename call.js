@@ -1,4 +1,4 @@
-import { getTemplates, changeTemplateCrodox } from './crodoxParser.js';
+import { getTemplates, changeTemplateCrodox } from './parse.js';
 import { collectionGrammarSelection } from './inputParser.js';
 import { Graph } from './graph.js';
 import { appyAllTemplates, readFile } from './inputParser.js';
